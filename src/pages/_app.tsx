@@ -34,7 +34,8 @@ import FallbackSpinner from 'src/components/fall-back'
 import { SettingsConsumer, SettingsProvider } from 'src/contexts/SettingsContext'
 import AclGuard from 'src/components/auth/AclGuard'
 import ReactHotToast from 'src/components/react-hot-toast'
-import { useSettings } from 'src/hooks/useSettings'
+
+// import { useSettings } from 'src/hooks/useSettings'
 import ThemeComponent from 'src/theme/ThemeComponent'
 
 type ExtendedAppProps = AppProps & {
@@ -73,7 +74,7 @@ const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
 export default function App(props: ExtendedAppProps) {
   const { Component, pageProps } = props
 
-  const { settings } = useSettings()
+  // const { settings } = useSettings()
 
   // Variables
   const getLayout = Component.getLayout ?? (page => <>{page}</>)
